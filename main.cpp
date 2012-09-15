@@ -23,25 +23,25 @@
 //
 //
 
-#include <iostream>
-#include <math.h>
-#include "time.h"
+#include <iostream> //Added for In / Out support. We are able to use cin and cout.
+#include <math.h> //Added for the calculations.
+#include "time.h" //Added for random number (sran)
 
-using namespace std;
+using namespace std; //Using the standard namespace.
 
-int main() {
+int main() { //Main function for C++ program.
     
-    char keyPress, keyPressRandom;
+    char keyPress, keyPressRandom; //Char variables for letters such as 'a' and '+'.
     
-    int decimalNumber(0), withoutRemainder(0);
+    int decimalNumber(0); /* ,withoutRemainder(0);*/ //Int for whole numbers such as '1' and '12'
     
-    double numberOne;
+    double numberOne; //Double for numbers from 10^-308 to to^308, including decimal numbers.
 
-    long double number_on_screen;
+    long double number_on_screen; //Long double for numbers from 10^-4932 to 10^4932 including decimals.
     
     cout << "*********************************************************************************\n";
     cout << "*                                                                               *\n";
-    cout << "*                       Welcome to calculator Awesome!                          *\n";
+    cout << "*                       Welcome to calculator Awesome!                          *\n"; //Welcome statement is printed to screen.
     cout << "*                                                                               *\n";
     cout << "*********************************************************************************\n";
     
