@@ -148,9 +148,10 @@ int main() {
 //                cout << "DEBUG - number: " << number_on_screen << "\n\n";
 //                cout << "DEBUG - remainder: " << withoutRemainder << "\n\n";
                 
-                withoutRemainder = number_on_screen;
+                number_on_screen = double(int(number_on_screen));
                 
-                double(number_on_screen) = withoutRemainder;
+//                withoutRemainder = number_on_screen;
+//                double(number_on_screen) = withoutRemainder;
                 
 //                cout << "DEBUG - number: " << number_on_screen << "\n\n";
 //                cout << "DEBUG - remainder: " << withoutRemainder << "\n\n";
@@ -187,9 +188,9 @@ int main() {
                 break;
         }
         
-        if (keyPress == 'd') {
-            number_on_screen = withoutRemainder;
-        }
+//        if (keyPress == 'd') {
+//            number_on_screen = withoutRemainder;
+//        }
      
         if (keyPress !='q') {
             cout << "\n[[ ";
