@@ -45,13 +45,13 @@ int main() { //Main function for C++ program.
     cout << "*                                                                               *\n";
     cout << "*********************************************************************************\n";
     
-    cout << "\nIf the result is a decimal number how many decimals do you want after the comma?\n";
+    cout << "\nIf the result is a decimal number how many decimals do you want after the comma?\n"; //Asks the user how many decimals it want.
     
-    cin >> decimalNumber;
+    cin >> decimalNumber; //User input for number fo decimals. Stored as int since you cant have half a decimal.
     
     cout.setf(ios::fixed);
-    cout.setf(ios::showpoint);
-    cout.precision(decimalNumber);
+    cout.setf(ios::showpoint);      //Choose how many decimals we want.
+    cout.precision(decimalNumber);  //Number in brackets (decimalNumber) chooses the number of decimals we want.
     
     cout << "\nDo you want to start with a random number from 0+100?\n"
          << "y or n\n";
