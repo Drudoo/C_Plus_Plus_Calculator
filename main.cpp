@@ -144,19 +144,13 @@ int main() {
                 number_on_screen = pow(number_on_screen, numberOne);
                 break;
                 
-            case 'd': {
-//                cout << "DEBUG - number: " << number_on_screen << "\n\n";
-//                cout << "DEBUG - remainder: " << withoutRemainder << "\n\n";
-                
+            case 'd': 
                 number_on_screen = double(int(number_on_screen));
                 
 //                withoutRemainder = number_on_screen;
 //                double(number_on_screen) = withoutRemainder;
-                
-//                cout << "DEBUG - number: " << number_on_screen << "\n\n";
-//                cout << "DEBUG - remainder: " << withoutRemainder << "\n\n";
                 break;
-            }
+            
             
             case 'e':
                 number_on_screen=0;
