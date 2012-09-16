@@ -60,17 +60,17 @@ int main() { //Main function for C++ program.
     
     srand(time(NULL));  //Using sran to get a better random, so we are not stuck with the same random number each time we run the program.
     
-    switch (keyPressRandom) {
-        case 'y':
+    switch (keyPressRandom) {   //Switch statement for checking if the user want a random number or not.
+        case 'y':   //User is able to choose lowercase y or uppercase Y for yes.
         case 'Y':
-            number_on_screen = rand()%100;
+            number_on_screen = rand()%100; //The number_on_screen is set to a random number from 0-100.
             break;
-        case 'n':
+        case 'n':   //User is able to choose lowercase n or uppercase N for no.
         case 'N':
-            number_on_screen = (0.0);
+            number_on_screen = (0.0); //The number_on_screen is set to 0, with decimals matching the number chosen earlier.
             break;
         default:
-            cout << "Choose y for yes, n for no\n";
+            cout << "Choose y for yes, n for no\n"; //If the user does not choose any of the options it is promted with this message.
             break;
     }
     
