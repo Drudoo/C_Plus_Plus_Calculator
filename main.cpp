@@ -35,7 +35,7 @@ int main() { //Main function for C++ program.
     
     int decimalNumber(0); /* ,withoutRemainder(0);*/ //Int for whole numbers such as '1' and '12'
     
-    double numberOne; //Double for numbers from 10^-308 to to^308, including decimal numbers.
+    double numberOne; //Double for numbers from 10^-308 to to 10^308, including decimal numbers.
 
     long double number_on_screen; //Long double for numbers from 10^-4932 to 10^4932 including decimals.
     
