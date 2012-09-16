@@ -70,6 +70,7 @@ int main() { //Main function for C++ program.
             number_on_screen = (0.0);
             break;
         default:
+            cout << "Choose y for yes, n for no\n";
             break;
     }
     
