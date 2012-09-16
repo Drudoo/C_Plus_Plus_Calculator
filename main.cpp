@@ -74,7 +74,7 @@ int main() { //Main function for C++ program.
             break;
     }
     
-    cout << "Choose what you want to do:\n"
+    cout << "Choose what you want to do:\n" //Writes to the user what is possible with this calculator.
          << "Press + for +\n"
          << "Press - for -\n"
          << "Press * for *\n"
@@ -89,82 +89,81 @@ int main() { //Main function for C++ program.
          << "Press e for clear\n\n"
          << "[[ ";
     
-    cout.width(20);
+    cout.width(20); //We want the next line of text in cout to be 20 places away.
         
-    cout << right << number_on_screen << " ]] \n";
+    cout << right << number_on_screen << " ]] \n"; //We choose the right side and print out number to the right.
     
     
-    do {
+    do { //Created a do-while loop to run as long as the user does not press q (for quit).
         
-        cin >> keyPress;
+        cin >> keyPress; //Checks the user input. 
 
-        switch (keyPress) {
-            case '+':
-                cin >> numberOne;
-                number_on_screen = number_on_screen + numberOne;
+        switch (keyPress) { //Switch statement for each math operator.
+            case '+': //If the user press + 
+                cin >> numberOne; //User input
+                number_on_screen = number_on_screen + numberOne; //The number on the screen is added to the user input and displayed on the screen.
                 break;
             
-            case '-':
-                cin >> numberOne;
-                number_on_screen = number_on_screen - numberOne;
+            case '-': //If the user press -
+                cin >> numberOne; //User input
+                number_on_screen = number_on_screen - numberOne; //The number on the screen is substracted with the user input and displayed on the screen.
                 break;
 
-            case '*':
-                cin >> numberOne;
-                number_on_screen = number_on_screen * numberOne;
+            case '*': //If the user press *
+                cin >> numberOne; //User input
+                number_on_screen = number_on_screen * numberOne; //The number on the screen is multiplied with the user input and displayed on the screen.
                 break;
                 
-            case '/':
-                cin >> numberOne;
-                number_on_screen = number_on_screen / numberOne;
+            case '/': //If the user press /
+                cin >> numberOne; //User input
+                number_on_screen = number_on_screen / numberOne; //The number on the screen is divided with the user input and displayed on the screen.
                 break;
                 
-            case '%': 
-                cin >> numberOne;
-                number_on_screen = int(number_on_screen) % int(numberOne);
-                break;
-            
-            case 's':
-                number_on_screen = sin(number_on_screen);
-                break;
-                
-            case 'c':
-                number_on_screen = cos(number_on_screen);
-                break;
-                
-            case 't':
-                number_on_screen = tan(number_on_screen);
-                break;
-                
-            case 'r':
-                number_on_screen = sqrt(number_on_screen);
-                break;
-                
-            case '^':
-                cin >> numberOne;
-                number_on_screen = pow(number_on_screen, numberOne);
-                break;
-                
-            case 'd': 
-                number_on_screen = double(int(number_on_screen));
-                
-//                withoutRemainder = number_on_screen;
-//                double(number_on_screen) = withoutRemainder;
+            case '%':  //If the user press %
+                cin >> numberOne; //User input
+                number_on_screen = int(number_on_screen) % int(numberOne); //We cant use double with modulus so we convert the numbers to int, thereby removing their decimals. The number on the screen is divided with the user input and the rest is displayed on the screen.
                 break;
             
+            case 's': //If the user press s
+                number_on_screen = sin(number_on_screen); //We take sine of the number on the screen.
+                break;
+                
+            case 'c': //If the user press c
+                number_on_screen = cos(number_on_screen); //We take cosine of the number on the screen.
+                break;
+                
+            case 't': //If the user press t
+                number_on_screen = tan(number_on_screen);  //We take tangent of the number on the screen.
+                break;
+                
+            case 'r': //If the user press r
+                number_on_screen = sqrt(number_on_screen); //We take the squareroot of the number on the screen.
+                break;
+                
+            case '^': //If the user press ^
+                cin >> numberOne; //User input
+                number_on_screen = pow(number_on_screen, numberOne); //We take the number on the screen in the power of the user input.
+                break;
+                
+            case 'd':  //If the user press d
+                number_on_screen = double(int(number_on_screen)); //If the number on the screen have decimals. We remove those decimals without rounding up or down.
+                                                                  //This is done by first converting out number to an int, thereby removing the deciamls and then
+                                                                  //converting back to double, adding .00 as decimals.
+                break;
             
-            case 'e':
-                number_on_screen=0;
+            
+            case 'e': //If the user press e
+                number_on_screen=0; //Replace the number on the screen with 0.
                 break;
                 
                 
-            default:
+            default: //If the user does none of the above.
                 
-                if (keyPress == 'q') {
-                    cout << "Exitting!\n\n";
+                if (keyPress == 'q') { //If the user press q
+                    cout << "Exiting!\n"; //Exiting is printed out to the screen.
                 }
                 
-                else {
+                else { //Else print out what can be pressed.
                     cout << "Choose what you want to do:\n"
                     << "Press + for +\n"
                     << "Press - for -\n"
@@ -182,23 +181,14 @@ int main() { //Main function for C++ program.
                 
                 break;
         }
-        
-//        if (keyPress == 'd') {
-//            number_on_screen = withoutRemainder;
-//        }
      
-        if (keyPress !='q') {
-            cout << "\n[[ ";
-            cout.width(20);
-            cout << right << double(number_on_screen) << " ]] \n";
+        if (keyPress !='q') { //If q is not pressed then we print out display.
+            cout << "\n[[ "; //First square brackets
+            cout.width(20); //Move the number 20 steps to the right.
+            cout << right << number_on_screen << " ]] \n"; //Print the number on the screen and close the brackets.
+
         }
                 
-    } while (keyPress !='q');
-
-    number_on_screen=0.0;
-    
-    cout << "[[ ";
-    cout.width(20);
-    cout << right << number_on_screen << " ]] \n";
+    } while (keyPress !='q'); //Our do-while loop will quit when the user press q.
     
 }
