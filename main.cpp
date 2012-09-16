@@ -53,12 +53,12 @@ int main() { //Main function for C++ program.
     cout.setf(ios::showpoint);      //Choose how many decimals we want.
     cout.precision(decimalNumber);  //Number in brackets (decimalNumber) chooses the number of decimals we want.
     
-    cout << "\nDo you want to start with a random number from 0+100?\n"
+    cout << "\nDo you want to start with a random number from 0+100?\n" //Let the user have a random number from 0 to 100 to start with.
          << "y or n\n";
     
-    cin >> keyPressRandom;
+    cin >> keyPressRandom;  //Regristrer the userinput for y or n.
     
-    srand(time(NULL));
+    srand(time(NULL));  //Using sran to get a better random, so we are not stuck with the same random number each time we run the program.
     
     switch (keyPressRandom) {
         case 'y':
